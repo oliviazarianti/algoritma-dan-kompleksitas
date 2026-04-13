@@ -1,0 +1,44 @@
+# Menentukan Nilai Maksimum dalam Sebuah Array
+list_angka = []
+maximum_angka = []
+jumlah_angka = int(input("masukkan jumlah angka: "))
+
+for i in range(jumlah_angka):
+    nilai_angka = int(input(f"masukkan angka-{i+1}: "))
+    list_angka.append(nilai_angka)
+
+maxs = max(list_angka)
+maximum_angka.append(max)
+
+print("List awal:", list_angka)
+print("nilai maksimum: ", maxs)
+
+# Membuat List Bilangan Prima
+list_angka = []
+prima = []
+bukan_prima = []
+
+jumlah_bilangan = int(input("masukkan jumlah angka: "))
+
+for i in range(jumlah_bilangan):
+    nilai_angka = int(input(f"masukkan angka-{i+1}: "))
+    list_angka.append(nilai_angka)
+
+for nilai_angka in list_angka:
+    if nilai_angka <=1:
+        bukan_prima.append(nilai_angka)
+
+    else:
+        is_prima = True
+        for i in range(2,nilai_angka):
+            if nilai_angka% i== 0:
+                is_prima = False
+                break
+        if is_prima:
+            prima.append(nilai_angka)
+        else:
+            bukan_prima.append(nilai_angka)
+
+print("List awal:", list_angka)
+print("Bilangan prima:", prima)
+print("Bukan prima:", bukan_prima)
